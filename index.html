@@ -3,6 +3,8 @@
 
 <head>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
     <title></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,7 +14,86 @@
 </head>
 
 <body ng-app="app" ng-controller="weatherController" data-ng-init="init()">
+    <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Page 1</a></li>
+      <li><a href="#">Page 2</a></li>
+    </ul>
+    <form class="navbar-form navbar-left">
+      <div class="form-group">
+        <input type="text" class="form-control" ng-model="cityName" placeholder="Search">
+      </div>
+      <button type="button" class="btn btn-default"  ng-click="getWeather()">Submit</button>
+    </form>
+  </div>
+</nav>
 
+<div class="row bgimg">
+    <div class="container">
+        <div class="col-lg-6 left-side">
+            <div class="row left-top">
+                <div class="col-lg-6 inside-left-side">
+                    <h3>{{data.name}}</h3>
+                    <p>{{date | date:'hh:mm:ss a'}}</p>
+                </div>
+                <div class="col-lg-6 inside-right-side">
+                    <h3>24.4 &deg;C</h3>
+                </div>
+            </div>
+            <div class="row left-bottom">
+                <div class="col-lg-3 date">
+                    <span> {{date | date:'MM-dd'}}</span>
+                </div>
+                <div class="col-lg-3 status">
+                   {{data.weather[0].main}}
+                </div>
+                 <div class="col-lg-6 max-min">
+                   <span><i class="fa fa-level-up" aria-hidden="true"></i>24 &deg;C  </span><span><i class="fa fa-level-down" aria-hidden="true"></i>24 &deg;C</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 right-side">
+            <div class="col-lg-4 details-icon">
+                <img src="http://openweathermap.org/img/w/03n.png" class="img-resize">
+            </div>
+            <div class="col-lg-8">
+                <h2>Details</h2>
+        
+  <table class="table">
+   
+    <tbody>
+      <tr>
+        <td>Pressure</td>
+        <td>{{data.main.pressure}} hpa</td>
+      
+      </tr>
+      <tr>
+        <td>Humidity</td>
+        <td>{{data.main.humidity}} %</td>
+      
+      </tr>
+       <tr>
+        <td>Wind Speed</td>
+        <td>calm {{data.wind.speed}} m/s</td>
+      
+      </tr>
+       <tr>
+        <td>Wind Degree</td>
+        <td>{{data.main.deg}}</td>
+      
+      </tr>
+    </tbody>
+  </table>
+            </div>
+        </div>
+    </div>
+        
+</div>
 </body>
 
 </html>
