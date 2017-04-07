@@ -12,3 +12,15 @@ app.service('Cities', function($http) {
   };
 });
 
+app.filter('dateFilter', function() {
+
+  return function(input) {
+    var output =  moment(input).format("MM-DD HH:mm a");
+
+    // Do filter work here
+
+    return output;
+
+  }
+
+});

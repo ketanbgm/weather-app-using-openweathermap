@@ -57,3 +57,20 @@
 .img-resize{
         height: 136px;
 }
+
+.col-lg-12.next-data {
+    background: #36824c;
+    color: #fff;
+}
+
+.col-lg-12.next-data ul {
+    margin: 0;
+}
+
+li.side {
+      display: inline-block;
+    text-decoration: none;
+    width: 43px;
+    font-size: 12px;
+    font-weight: 400;
+}
