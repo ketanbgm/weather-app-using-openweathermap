@@ -11,7 +11,8 @@ $scope.init = function () {
 
 
 $scope.showPosition =function(position) {
-    console.log("Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude);
+    $scope.lat = position.coords.latitude;
+    $scope.lng = position.coords.longitude;
     Config()
     .then(function(config) {
       //$http.get(config.apiUrl);
