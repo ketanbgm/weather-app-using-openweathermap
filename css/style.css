@@ -61,16 +61,46 @@
 .col-lg-12.next-data {
     background: #36824c;
     color: #fff;
+        overflow-x: scroll;
 }
 
 .col-lg-12.next-data ul {
     margin: 0;
+    width: 3400px;
+        padding-left: 7px;
 }
 
 li.side {
       display: inline-block;
     text-decoration: none;
-    width: 43px;
+   width: 90px;
     font-size: 12px;
     font-weight: 400;
+        padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.side p {
+    margin: 0;
+}
+
+td.td-next {
+    display: inline-block;
+    /* padding: 0 !important; */
+    vertical-align: middle !important;
+    border: none !important;
+}
+span.daylist {
+    display: inline-block;
+    max-width: 200px;
+    min-width: 97px;
+}
+
+span.wimg {
+    display: inline-block;
+    padding-right: 49px;
+}
+span.maxtemp {
+    display: inline-block;
+    padding-right: 50px;
 }

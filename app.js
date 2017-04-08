@@ -24,3 +24,18 @@ app.filter('dateFilter', function() {
   }
 
 });
+
+app.filter('degreeFilter', function(){
+  return function(input){
+    var output = input - 273.15;
+    return output;
+  }
+})
+
+app.filter('timeStampToDay', function(){
+  return function(input){
+    var output = moment.unix(input).format("dddd");;
+    return output;
+  }
+})
+
