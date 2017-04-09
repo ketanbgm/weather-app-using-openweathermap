@@ -7,4 +7,4 @@ app.use(express.static(__dirname + '/public'));
 // var server = app.listen(80, function() {
 //     console.log('Server listening on port ' + server.address().port);
 // })
-app.listen(process.env.PORT || 8888)
+app.listen(process.env.PORT || 80)
