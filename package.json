@@ -1,0 +1,25 @@
+{
+  "name": "weather-app-using-openweathermap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ketanbgm/weather-app-using-openweathermap.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ketanbgm/weather-app-using-openweathermap/issues"
+  },
+  "homepage": "https://github.com/ketanbgm/weather-app-using-openweathermap#readme"
+}
