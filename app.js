@@ -25,6 +25,19 @@ app.filter('dateFilter', function() {
 
 });
 
+app.filter('timestampToTime', function() {
+
+  return function(input) {
+    var output = moment.unix(input).format("HH:mm a");
+
+    // Do filter work here
+
+    return output;
+
+  }
+
+});
+
 app.filter('degreeFilter', function(){
   return function(input){
     var output = input - 273.15;
@@ -34,8 +47,28 @@ app.filter('degreeFilter', function(){
 
 app.filter('timeStampToDay', function(){
   return function(input){
-    var output = moment.unix(input).format("dddd");;
+    var output = moment.unix(input).format("dddd");
     return output;
   }
 })
+app.directive('hcChart', function () {
+                return {
+                    restrict: 'E',
+                    template: '<div></div>',
+                    scope: {
+                        options: '='
+                    },
+                   link: function (scope, element) {
+
+Highcharts.chart(element[0], scope.options);
+
+scope.$watch('options', function(newVal) {
+if (newVal) {
+Highcharts.chart(element[0], scope.options);
+console.log("I see a data change!");
+}
+}, true);
+}
+                };
+            })
 

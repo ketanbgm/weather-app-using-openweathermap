@@ -59,25 +59,32 @@
 }
 
 .col-lg-12.next-data {
-    background: #36824c;
+       background: #000;
     color: #fff;
-        overflow-x: scroll;
+    overflow-x: scroll;
+    opacity: 0.8;
+        
 }
 
 .col-lg-12.next-data ul {
     margin: 0;
-    width: 3400px;
+    width: 3431px;
         padding-left: 7px;
 }
 
 li.side {
-      display: inline-block;
+     display: inline-block;
     text-decoration: none;
-   width: 90px;
-    font-size: 12px;
-    font-weight: 400;
-        padding-top: 10px;
-    padding-bottom: 10px;
+    width: 83px;
+    font-size: 10px;
+    font-weight: 100;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    width: 79px;
+    text-align: center;
+    margin: 6px 8px 6px -2px;
 }
 
 .side p {
@@ -103,4 +110,74 @@ span.wimg {
 span.maxtemp {
     display: inline-block;
     padding-right: 50px;
+}
+.col-lg-6.daily-weather {
+  
+   /*border: 1px solid #ddd;*/
+    margin: 27px 0px 25px 0px;
+       
+   
+}
+
+.other-details{
+        border: 1px solid #ddd;
+    background-color: #3786c9;
+    background: #000428;
+    background: -webkit-linear-gradient(to right, #004e92, #000428);
+    background: linear-gradient(to right, #004e92, #000428);
+    color: white;
+}
+
+.details-details{
+            padding-left: 90px;
+}
+
+.chart{
+        margin-top: 40px;
+}
+
+.status{
+        text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+.col-lg-6.max-min {
+    font-size: 22px;
+    line-height: 2.5;
+}
+
+span.sunrise {
+      padding: 0px 45px 0 65px;
+    text-align: center;
+}
+.details-details h2 {
+    padding-left: 139px;
+}
+
+.sun-map{
+        padding-top: 20px;
+}
+.sunrise:hover .tooltiptext {
+    visibility: visible;
+}
+
+.sunrise {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.sunrise .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #002e64;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+ 
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
 }
