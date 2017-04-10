@@ -14,4 +14,4 @@ var allowCrossDomain = function(req, res, next) {
 
 app.use(allowCrossDomain);
 
-app.listen(process.env.PORT || 80)
+app.listen(process.env.PORT || 8080)

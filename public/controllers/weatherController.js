@@ -19,8 +19,10 @@ app.controller('weatherController', function ($scope, $http, Config, Cities) {
 
                 } else {
                     //on load get data by latitude and longitude
-                    var lat = position.coords.latitude;
-                    var lng = position.coords.longitude;
+                    // var lat = position.coords.latitude;
+                    // var lng = position.coords.longitude;
+                    var lat = 12.9716;
+                    var lng = 77.5946;
                     $scope.query = $scope.url + 'weather?lat=' + lat + '&lon=' + lng + '&&APPID=5562f355df8fce1bb3108f75c8de2889';
                     console.log($scope.query)
                 }
