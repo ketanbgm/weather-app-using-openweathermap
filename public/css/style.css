@@ -10,11 +10,13 @@
 .navbar-inverse {
     background-color: #002254;
     border-color: #002254;
+        margin: 0px;
 }
 
 .navbar-inverse .navbar-brand {
     color: #fff;
     font-size: 21px;
+    border-radius: 0px;
     
 }
 
