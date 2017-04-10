@@ -133,15 +133,31 @@
         </div>
     </div>
      <div class="col-lg-12 sun-map">
+       
         <div class="col-lg-6 riseset">
-            <span class="sunrise">
-                <span class="tooltiptext">Sunrise</span>
-            <img src="assets/img/sunrise.png"> {{data.sys.sunrise | timestampToTime}}
-            </span>
-            <span class="sunset">
-             <img src="assets/img/sunset.png"> {{data.sys.sunset | timestampToTime}}
-            </span>
+            
+                <div class="col-lg-6 sun-rise-set">
+                   <div class="row"> <span class="tooltiptext">Sunrise</span></div>
+                
+                <div class="row"><span class="sunrise">
+                    
+                <img src="assets/img/sunrise.png"> <div class="row"> {{data.sys.sunrise | timestampToTime}}</div>
+                </span>
+                </div>
+                </div>
+
+                <div class="col-lg-6 sun-rise-set">
+                  <div class="row">  <span class="tooltiptext">Sunset</span></div>
+                  <div class="row">
+                <span class="sunset">
+                    
+                <img src="assets/img/sunset.png"> <div class="row"> {{data.sys.sunset | timestampToTime}}</div>
+                </span>
+                  </div>
+                </div>
+
         </div>
+
      </div>
 </body>
 

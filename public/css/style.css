@@ -176,8 +176,23 @@ span.sunrise {
     text-align: center;
     padding: 5px 0;
     border-radius: 6px;
+        font-size: 21px;
  
     /* Position the tooltip text - see examples below! */
     position: absolute;
     z-index: 1;
+}
+.sun-rise-set{
+    text-align: center;
+}
+
+span.tooltiptext {
+    font-size: 21px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.row.ng-binding {
+    font-size: 20px;
+    font-weight: 600;
 }
