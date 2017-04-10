@@ -2,7 +2,8 @@ app.controller('weatherController', function ($scope, $http, Config, Cities) {
 
     $scope.init = function () {
         if (navigator.geolocation) {
-            var geo = navigator.geolocation.getCurrentPosition($scope.getWeather);
+           // var geo = navigator.geolocation.getCurrentPosition($scope.getWeather);
+           $scope.getWeather();
         } else {
             console.log("Geolocation is not supported by this browser.");
         }
