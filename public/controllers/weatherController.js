@@ -1,5 +1,9 @@
 app.controller('weatherController', function ($scope, $http, Config, Cities) {
 
+         
+    
+
+
     $scope.init = function () {
         if (navigator.geolocation) {
            // var geo = navigator.geolocation.getCurrentPosition($scope.getWeather);
@@ -94,8 +98,5 @@ app.controller('weatherController', function ($scope, $http, Config, Cities) {
             });
 
     }
-    
- 
-                                       
 
 })

@@ -196,3 +196,7 @@ span.tooltiptext {
     font-size: 20px;
     font-weight: 600;
 }
+#map {
+  height: 100%;
+}
+
