@@ -1,8 +1,4 @@
-app.controller('weatherController', function ($scope, $http, Config, Cities) {
-
-         
-    
-
+app.controller('weatherController', function ($scope, $http, Config) {
 
     $scope.init = function () {
         if (navigator.geolocation) {
@@ -15,6 +11,7 @@ app.controller('weatherController', function ($scope, $http, Config, Cities) {
  $scope.chartOptions = {}
 
     $scope.getWeather = function (position) {
+        // call the service config
         Config()
             .then(function (config) {
                 $scope.url = config.data.apiUrl;
@@ -46,7 +43,7 @@ app.controller('weatherController', function ($scope, $http, Config, Cities) {
                                 $scope.nextData = nextData.data.list;
                                 $scope.getNext = $scope.url + 'forecast/daily?id=' + $scope.data.id + '&&APPID=5562f355df8fce1bb3108f75c8de2889';
                                 console.log($scope.getNext)
-                              
+                              //get data for next 7 days
                                 $http.get($scope.getNext)
                                 
                                     .then(function (sevenDays) {
@@ -54,6 +51,7 @@ app.controller('weatherController', function ($scope, $http, Config, Cities) {
                                         $scope.minTemp = [];
                                         $scope.maxTemp = [];
                                         $scope.sevenDays = sevenDays.data.list;
+                                        // loop through data using underscorejs to fetch temprature for next 7 days
                                         _.each( $scope.sevenDays, function(user){
                                             var mntemp = (user.temp.min- 273.15).toFixed(2);
                                             var mxtemp = (user.temp.max- 273.15).toFixed(2);
@@ -64,7 +62,7 @@ app.controller('weatherController', function ($scope, $http, Config, Cities) {
 
                                         });
                                             console.log( $scope.minTemp );
-                                        
+                                        // chart configuration
                                         $scope.chartOptions = {
                                             title: {
                                                 text: 'Temperature data'
